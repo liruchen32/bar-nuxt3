@@ -75,3 +75,9 @@ const icons = [
   }
 ];
 </script>
+
+<style lang="scss" scoped>
+.v-footer {
+  max-height: 225px;
+}
+</style>
