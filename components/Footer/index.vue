@@ -1,6 +1,6 @@
 <template>
   <v-footer class="d-flex flex-column">
-    <v-row class="ma-0 pa-0">
+    <v-row class="w-100 ma-0 pa-0">
       <v-col cols="12" sm="3">
         <div class="ma-auto pa-auto text-center">
           <h2>CONTACT</h2>
@@ -62,18 +62,25 @@
   </v-footer>
 </template>
 
-<script setup>
+<script>
 import { mdiFacebook, mdiInstagram, mdiPhone, mdiMapMarker } from '@mdi/js';
-const icons = [
-  {
-    icon: mdiFacebook,
-    link: 'https://www.facebook.com/pages/category/Bar/BAR%E5%AE%AE-Miya-337530157118054/'
-  },
-  {
-    icon: mdiInstagram,
-    link: 'https://www.instagram.com/miya_taipei/?hl=zh-tw'
+export default {
+  name: 'Header',
+  setup() {
+    const icons = [
+      {
+        icon: mdiFacebook,
+        link: 'https://www.facebook.com/pages/category/Bar/BAR%E5%AE%AE-Miya-337530157118054/'
+      },
+      {
+        icon: mdiInstagram,
+        link: 'https://www.instagram.com/miya_taipei/?hl=zh-tw'
+      }
+    ];
+
+    return { icons, mdiPhone, mdiMapMarker };
   }
-];
+};
 </script>
 
 <style lang="scss" scoped>
