@@ -18,12 +18,9 @@
 </template>
 
 <script>
-import { useDisplay } from 'vuetify';
 export default {
   setup() {
     const render = ref(false);
-
-    const { smAndDown, mdAndUp } = useDisplay();
 
     onMounted(() => {
       setTimeout(() => {
@@ -31,7 +28,7 @@ export default {
       }, 500);
     });
 
-    return { render, smAndDown, mdAndUp };
+    return { render };
   }
 };
 </script>
