@@ -1,7 +1,14 @@
 <template>
-  <v-app-bar v-if="smAndUp">
-    <v-row class="mx-2">
-      <v-col class="header_left mx-4 pointer" cols="6" @click="toHome">
+  <v-app-bar v-if="render">
+    <v-app-bar-nav-icon v-if="xs" @click="handleDrawerShow" />
+    <div v-if="xs" class="d-flex flex-col align-center pointer" @click="toHome">
+      <v-avatar class="mx-2" size="x-large">
+        <v-img src="logos/logo.png"></v-img>
+      </v-avatar>
+      <h2>BAR 宮</h2>
+    </div>
+    <v-row v-if="smAndUp" class="mx-2 justify-center">
+      <v-col class="header_left mx-4 pointer" cols="4" @click="toHome">
         <v-avatar class="mx-2" size="x-large">
           <v-img src="logos/logo.png"></v-img>
         </v-avatar>
@@ -10,30 +17,16 @@
       <v-spacer />
       <v-col class="header_rigth mx-4" cols="4">
         <v-btn
-          v-for="pageList in pageLists.reverse()"
-          :key="pageList.title"
+          v-for="(pageList, idx) in pageLists"
           variant="plain"
+          :key="pageList.title"
           :to="pageList.router"
+          :class="`order-${Number(pageLists.length - idx)}`"
         >
           {{ pageList.title }}
         </v-btn>
       </v-col>
     </v-row>
-  </v-app-bar>
-  <v-app-bar v-if="xs">
-    <template v-slot:prepend>
-      <v-app-bar-nav-icon @click="handleDrawerShow" />
-    </template>
-    <div class="d-flex align-center pointer" @click="toHome">
-      <v-avatar class="mx-2" size="x-large">
-        <v-img src="logos/logo.png"></v-img>
-      </v-avatar>
-      <h2>BAR 宮</h2>
-    </div>
-
-    <template v-slot:append>
-      <v-btn icon="mdi-dots-vertical"></v-btn>
-    </template>
   </v-app-bar>
 </template>
 
@@ -47,6 +40,7 @@ export default {
   name: 'Header',
 
   setup() {
+    const render = ref(false);
     const { pageLists } = pageListsStore();
 
     const drawer = drawerStore();
@@ -58,8 +52,20 @@ export default {
       useRouter().push('/');
     };
 
+    onMounted(() => {
+      render.value = true;
+    });
+
     const { xs, smAndUp } = useDisplay();
-    return { pageLists, handleDrawerShow, mdiMenu, toHome, xs, smAndUp };
+    return {
+      render,
+      pageLists,
+      handleDrawerShow,
+      mdiMenu,
+      toHome,
+      xs,
+      smAndUp
+    };
   }
 };
 </script>
