@@ -59,7 +59,8 @@ export default {
     const { xs, smAndUp } = useDisplay();
     return {
       render,
-      pageLists,
+      // no need to show home route for header
+      pageLists: pageLists.slice(1, pageLists.length),
       handleDrawerShow,
       mdiMenu,
       toHome,
