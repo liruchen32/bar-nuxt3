@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { mdiGlassCocktail, mdiNoodles } from '@mdi/js';
+import { mdiHome, mdiGlassCocktail, mdiNoodles } from '@mdi/js';
 
 export const pageListsStore = defineStore({
   id: 'page-lists-store',
@@ -7,12 +7,23 @@ export const pageListsStore = defineStore({
     return {
       lists: [
         {
+          name: 'Home',
+          title: 'HOME',
+          router: '/',
+          icon: mdiHome
+        },
+        {
           name: 'Cocktail',
           title: 'COCKTAIL',
           router: 'cocktail',
           icon: mdiGlassCocktail
         },
-        { name: 'Food', title: 'FOOD', router: 'food', icon: mdiNoodles }
+        {
+          name: 'Food',
+          title: 'FOOD',
+          router: 'food',
+          icon: mdiNoodles
+        }
       ]
     };
   },
