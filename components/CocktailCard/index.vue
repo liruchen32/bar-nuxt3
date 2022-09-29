@@ -5,7 +5,6 @@
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"
   >
-    {{ isHover }}
     <div class="card_face card_face--front">
       <img :src="`/cocktails/${frontImgSrc}.jpg`" />
     </div>
