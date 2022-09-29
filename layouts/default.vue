@@ -1,19 +1,13 @@
 <template>
   <v-app>
-    <v-navigation-drawer app>
-      <!-- -->
-    </v-navigation-drawer>
-
-    <v-app-bar app>
-      <!-- -->
-    </v-app-bar>
-
+    <NavigationDrawer />
+    <Header />
     <!-- Sizes your content based upon application components -->
     <v-main>
       <!-- Provides the application the proper gutter -->
-      <v-container fluid>
+      <v-container fluid class="pa-0">
         <!-- If using vue-router -->
-        <!-- <router-view></router-view> -->
+        <router-view></router-view>
       </v-container>
     </v-main>
 
