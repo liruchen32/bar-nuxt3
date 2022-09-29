@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card ma-auto"
+    class="card"
     :class="isHover ? 'elevation-12' : 'elevation-2'"
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"

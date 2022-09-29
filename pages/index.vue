@@ -1,9 +1,6 @@
 <template>
   <div class="ma-0 pa-0">
-    <v-parallax
-      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-      height="100vh"
-    >
+    <v-parallax src="/home_page_bg.png" height="100vh">
       <Transition name="slide-y">
         <div
           class="h-100 d-flex flex-column justify-center align-center"
@@ -14,14 +11,7 @@
         </div>
       </Transition>
     </v-parallax>
-    <v-row class="d-flex ma-4">
-      <v-col cols="12" sm="6" md="4" v-for="n in cocktailImages" :key="n">
-        <CocktailCard
-          :front-img-src="`${n}_front`"
-          :back-img-src="`${n}_back`"
-        />
-      </v-col>
-    </v-row>
+    <CardSlider />
   </div>
 </template>
 
@@ -29,11 +19,6 @@
 export default {
   setup() {
     const render = ref(false);
-    const cocktailImages = ref([
-      '001_FLAVORED_GIN_TONIC',
-      '002_NENE',
-      '003_JUGURONI'
-    ]);
 
     onMounted(() => {
       setTimeout(() => {
@@ -41,7 +26,7 @@ export default {
       }, 500);
     });
 
-    return { render, cocktailImages };
+    return { render };
   }
 };
 </script>
