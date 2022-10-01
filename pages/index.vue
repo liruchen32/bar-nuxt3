@@ -14,6 +14,19 @@
         </div>
       </Transition>
     </v-parallax>
+    <div class="d-flex justify-center align-center mt-3">
+      <h4 class="text-h5">熱門調酒</h4>
+      <v-btn
+        class="mx-4"
+        variant="outlined"
+        position="absolute"
+        style="right: 0px"
+        size="small"
+        to="cocktails"
+      >
+        更多
+      </v-btn>
+    </div>
     <CardSlider />
   </div>
 </template>
