@@ -5,11 +5,13 @@
         v-for="pageList in pageLists"
         active-color="light-blue lighten-3"
         exact
-        :key="pageList.name"
-        :value="pageList.router"
-        :to="pageList.router"
-        :title="pageList.title"
-        :prepend-icon="pageList.icon"
+        :key="pageList?.name"
+        :value="pageList?.router"
+        :to="pageList?.router"
+        :title="pageList?.title"
+        :prepend-icon="pageList?.icon"
+        :href="pageList?.href"
+        :target="pageList?.target"
       />
     </v-list>
   </v-navigation-drawer>

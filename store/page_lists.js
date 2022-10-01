@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { mdiHome, mdiGlassCocktail, mdiNoodles } from '@mdi/js';
+import { mdiHome, mdiGlassCocktail, mdiNoodles, mdiBook } from '@mdi/js';
 
 export const pageListsStore = defineStore({
   id: 'page-lists-store',
@@ -23,6 +23,13 @@ export const pageListsStore = defineStore({
           title: 'FOOD',
           router: 'food',
           icon: mdiNoodles
+        },
+        {
+          name: 'Reservation',
+          title: 'RESERVATION',
+          icon: mdiBook,
+          href: 'https://inline.app/booking/-MzXuKPk5Tmrv9ICzpQo:inline-live-2/-MzXuKeY8t26PYaNslDS',
+          target: '_blank'
         }
       ]
     };
