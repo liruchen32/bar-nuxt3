@@ -30,6 +30,7 @@ export default {
       setTimeout(() => {
         render.value = true;
       }, 500);
+      window.scrollTo(0, 0);
     });
 
     return { render };

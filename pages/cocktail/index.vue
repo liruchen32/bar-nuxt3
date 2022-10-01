@@ -24,6 +24,10 @@ export default {
       '004_MATCHA'
     ]);
 
+    onMounted(() => {
+      window.scrollTo(0, 0);
+    });
+
     return { cocktailImages };
   }
 };
