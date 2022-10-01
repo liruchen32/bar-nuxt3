@@ -1,6 +1,13 @@
 <template>
   <v-row class="d-flex ma-4">
-    <v-col cols="12" sm="6" md="4" v-for="n in cocktailImages" :key="n">
+    <v-col
+      class="d-flex justify-center"
+      cols="12"
+      sm="6"
+      md="4"
+      v-for="n in cocktailImages"
+      :key="n"
+    >
       <CocktailCard :front-img-src="`${n}_front`" :back-img-src="`${n}_back`" />
     </v-col>
   </v-row>

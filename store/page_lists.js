@@ -13,9 +13,9 @@ export const pageListsStore = defineStore({
           icon: mdiHome
         },
         {
-          name: 'Cocktail',
-          title: 'COCKTAIL',
-          router: 'cocktail',
+          name: 'Cocktails',
+          title: 'COCKTAILS',
+          router: 'cocktails',
           icon: mdiGlassCocktail
         },
         {
