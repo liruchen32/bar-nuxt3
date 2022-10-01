@@ -1,9 +1,13 @@
 <template>
   <div
     class="card"
-    :class="isHover ? 'elevation-12' : 'elevation-2'"
+    :class="[
+      isHover ? 'elevation-12' : 'elevation-2',
+      isClick ? 'toggle_card' : ''
+    ]"
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"
+    @click="onClick"
   >
     <div class="card_face card_face--front">
       <img :src="`/cocktails/${frontImgSrc}.jpg`" />
@@ -29,8 +33,14 @@ export default {
 
   setup(props) {
     const isHover = ref(false);
+    const isClick = ref(false);
     const { frontImgSrc, backImgSrc } = toRefs(props);
-    return { isHover, frontImgSrc, backImgSrc };
+
+    function onClick() {
+      isClick.value = !isClick.value;
+    }
+
+    return { isHover, isClick, frontImgSrc, backImgSrc, onClick };
   }
 };
 </script>
@@ -41,13 +51,13 @@ export default {
   width: 300px;
   height: 500px;
   cursor: pointer;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
   transform-style: preserve-3d;
   border-radius: 12px;
 
-  &:hover {
-    transform: rotateY(0.5turn);
-  }
+  // &:hover {
+  //   transform: rotateY(0.5turn);
+  // }
 
   .card_face {
     position: absolute;
@@ -56,7 +66,7 @@ export default {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
 
     // -webkit-box-reflect: below 0
     //   linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
@@ -72,5 +82,8 @@ export default {
       transform: rotateY(0.5turn);
     }
   }
+}
+.toggle_card {
+  transform: rotateY(0.5turn);
 }
 </style>
