@@ -19,8 +19,10 @@
         <v-btn
           v-for="(pageList, idx) in pageLists"
           variant="plain"
-          :key="pageList.title"
-          :to="pageList.router"
+          :key="pageList?.title"
+          :to="pageList?.router"
+          :href="pageList?.href"
+          :target="pageList?.target"
           :class="`order-${Number(pageLists.length - idx)}`"
         >
           {{ pageList.title }}
