@@ -3,14 +3,14 @@
     <v-app-bar-nav-icon v-if="xs" @click="handleDrawerShow" />
     <div v-if="xs" class="d-flex flex-col align-center pointer" @click="toHome">
       <v-avatar class="mx-2" size="x-large">
-        <v-img src="logos/logo.png"></v-img>
+        <v-img src="https://i.ibb.co/Xbq8hBr/logo.png"></v-img>
       </v-avatar>
       <h2>BAR 宮</h2>
     </div>
     <v-row v-if="smAndUp" class="mx-2 justify-center">
       <v-col class="header_left mx-4 pointer" cols="4" @click="toHome">
         <v-avatar class="mx-2" size="x-large">
-          <v-img src="logos/logo.png"></v-img>
+          <v-img src="https://i.ibb.co/Xbq8hBr/logo.png"></v-img>
         </v-avatar>
         <h2>BAR 宮</h2>
       </v-col>

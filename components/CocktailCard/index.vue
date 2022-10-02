@@ -10,10 +10,10 @@
     @click="onClick"
   >
     <div class="card_face card_face--front">
-      <img :src="`/cocktails/${frontImgSrc}.jpg`" />
+      <img :src="frontImgSrc" />
     </div>
     <div class="card_face card_face--back">
-      <img :src="`/cocktails/${backImgSrc}.jpg`" />
+      <img :src="backImgSrc" />
     </div>
   </div>
 </template>

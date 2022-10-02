@@ -1,13 +1,16 @@
 <template>
   <div class="ma-0 pa-0">
-    <v-parallax src="home_page_bg.png" class="parallax_body">
+    <v-parallax
+      src="https://i.ibb.co/RQ9Ttbv/home-page-bg.png"
+      class="parallax_body"
+    >
       <Transition name="slide-y">
         <div
           class="h-100 d-flex flex-column justify-center align-center"
           v-if="render"
         >
           <div style="width: 40%">
-            <v-img src="logos/logo.png"></v-img>
+            <v-img src="https://i.ibb.co/Xbq8hBr/logo.png"></v-img>
           </div>
           <h1 class="text-h3 my-2 text-white">BAR 宮</h1>
           <h4 class="text-h6 text-white">我有酒，你有故事嗎？</h4>
@@ -27,11 +30,12 @@
         更多
       </v-btn>
     </div>
-    <CardSlider :cocktail-images="cocktailImages" />
+    <CardSlider :cocktails="popularCocktails" />
   </div>
 </template>
 
 <script>
+import { cocktailsStore } from '@/store/cocktails';
 export default {
   name: 'Home-Paeg',
   setup() {
@@ -52,7 +56,9 @@ export default {
       '003_JUGURONI'
     ]);
 
-    return { render, cocktailImages };
+    const { popularCocktails } = cocktailsStore();
+
+    return { render, popularCocktails };
   }
 };
 </script>
