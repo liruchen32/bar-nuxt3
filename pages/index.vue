@@ -33,6 +33,7 @@
 
 <script>
 export default {
+  name: 'Home-Paeg',
   setup() {
     const render = ref(false);
 

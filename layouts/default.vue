@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <NavigationDrawer />
     <Header />
+    <NavigationDrawer />
     <!-- Sizes your content based upon application components -->
     <v-main>
       <!-- Provides the application the proper gutter -->
