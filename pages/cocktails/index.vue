@@ -14,21 +14,25 @@
 </template>
 
 <script>
-//   '001_FLAVORED_GIN_TONIC_front'
-// '001_FLAVORED_GIN_TONIC_back'
-// '002_NENE_front'
-// '002_NENE_back'
-// '003_JUGURONI_front'
-// '003_JUGURONI_back'
-// '004_MATCHA_front'
-// '004_MATCHA_back'
 export default {
+  name: 'Cocktails',
   setup() {
     const cocktailImages = ref([
       '001_FLAVORED_GIN_TONIC',
       '002_NENE',
       '003_JUGURONI',
-      '004_MATCHA'
+      '004_MATCHA',
+      '005_DAILY_LIFE',
+      '006_TREACLE_A',
+      '007_THAI',
+      '008_LEMON_SEA',
+      '009_CLAMNICILLIN',
+      '010_COFFASHION',
+      '011_GROUND_POUND',
+      '012_WOOD_CARRE',
+      '013_SANGRIAI_I',
+      '014_MICHI',
+      '015_ALPHA'
     ]);
 
     onMounted(() => {

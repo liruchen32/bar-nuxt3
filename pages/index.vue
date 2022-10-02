@@ -27,12 +27,13 @@
         更多
       </v-btn>
     </div>
-    <CardSlider />
+    <CardSlider :cocktail-images="cocktailImages" />
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Home-Paeg',
   setup() {
     const render = ref(false);
 
@@ -43,7 +44,15 @@ export default {
       window.scrollTo(0, 0);
     });
 
-    return { render };
+    const cocktailImages = ref([
+      '015_ALPHA',
+      '008_LEMON_SEA',
+      '004_MATCHA',
+      '007_THAI',
+      '003_JUGURONI'
+    ]);
+
+    return { render, cocktailImages };
   }
 };
 </script>

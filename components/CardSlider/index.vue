@@ -19,13 +19,16 @@ import { useDisplay } from 'vuetify';
 export default {
   name: 'Card-Slider',
 
-  setup() {
+  props: {
+    cocktailImages: {
+      type: Array,
+      default: []
+    }
+  },
+
+  setup(props) {
     const onboarding = ref(0);
-    const cocktailImages = ref([
-      '001_FLAVORED_GIN_TONIC',
-      '002_NENE',
-      '003_JUGURONI'
-    ]);
+    const { cocktailImages } = toRefs(props);
 
     const { xs, sm, mdAndUp, name } = useDisplay();
 
