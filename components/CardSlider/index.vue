@@ -4,9 +4,9 @@
       <v-row class="ma-4">
         <v-col class="d-flex justify-center" v-for="idx in singlePageCardCount">
           <CocktailCard
-            v-if="cocktailImages[idx + currentPage]"
-            :front-img-src="`${cocktailImages[idx + currentPage]}_front`"
-            :back-img-src="`${cocktailImages[idx + currentPage]}_back`"
+            v-if="cocktails[idx + currentPage]"
+            :front-img-src="cocktails[idx + currentPage].front_image"
+            :back-img-src="cocktails[idx + currentPage].back_image"
           />
         </v-col>
       </v-row>
@@ -20,7 +20,7 @@ export default {
   name: 'Card-Slider',
 
   props: {
-    cocktailImages: {
+    cocktails: {
       type: Array,
       default: []
     }
@@ -28,18 +28,18 @@ export default {
 
   setup(props) {
     const onboarding = ref(0);
-    const { cocktailImages } = toRefs(props);
+    const { cocktails } = toRefs(props);
 
     const { xs, sm, mdAndUp, name } = useDisplay();
 
     const windowItemsLength = computed(() => {
       switch (name.value) {
         case 'xs':
-          return cocktailImages.value.length;
+          return cocktails.value.length;
         case 'sm':
-          return Math.ceil(cocktailImages.value.length / 2);
+          return Math.ceil(cocktails.value.length / 2);
         default:
-          return Math.ceil(cocktailImages.value.length / 3);
+          return Math.ceil(cocktails.value.length / 3);
       }
     });
 
@@ -61,7 +61,7 @@ export default {
     return {
       onboarding,
       currentPage,
-      cocktailImages,
+      cocktails,
       xs,
       sm,
       mdAndUp,
