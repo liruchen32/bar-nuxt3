@@ -7,25 +7,25 @@ export const pageListsStore = defineStore({
     return {
       lists: [
         {
-          name: 'Home',
+          name: 'index',
           title: 'HOME',
           router: '/',
           icon: mdiHome
         },
         {
-          name: 'Cocktails',
+          name: 'cocktails',
           title: 'COCKTAILS',
           router: 'cocktails',
           icon: mdiGlassCocktail
         },
         {
-          name: 'Food',
+          name: 'food',
           title: 'FOOD',
           router: 'food',
           icon: mdiNoodles
         },
         {
-          name: 'Reservation',
+          name: 'reservation',
           title: 'RESERVATION',
           icon: mdiBook,
           href: 'https://inline.app/booking/-MzXuKPk5Tmrv9ICzpQo:inline-live-2/-MzXuKeY8t26PYaNslDS',

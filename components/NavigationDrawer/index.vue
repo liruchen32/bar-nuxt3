@@ -4,6 +4,7 @@
       <v-list-item
         v-for="pageList in pageLists"
         active-color="light-blue lighten-3"
+        :active="$route.name === pageList.name"
         exact
         :key="pageList?.name"
         :value="pageList?.router"
