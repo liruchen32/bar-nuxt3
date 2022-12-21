@@ -25,6 +25,7 @@ Roadmap:
 - [ ] 食物頁面
 - [ ] 酒吧介紹
 - [ ] SEO 優化
+- [ ] 更新至 Nuxt 3.0 stable
 
 ## Setup
 
