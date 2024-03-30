@@ -8,29 +8,31 @@
 </template>
 <script setup>
 useHead({
-  title: 'BAR 宮',
+  title: 'BAR宮-MIYA',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
   meta: [
     {
       hid: 'description',
       name: 'description',
-      content: 'BAR 宮 | 我有酒，你有故事嗎 ? 台北市大安區大安路一段31巷50號'
+      content:
+        'BAR宮-MIYA | 我有酒，你有故事嗎 ? 台北市大安區大安路一段31巷50號'
     },
     {
       hid: 'og:site_name',
       property: 'og:site_name',
-      content: 'BAR 宮'
+      content: 'BAR宮-MIYA'
     },
     {
       hid: 'og:title',
       property: 'og:title',
-      content: 'BAR 宮'
+      content: 'BAR宮-MIYA'
     },
     {
       hid: 'og:description',
       property: 'og:description',
-      content: 'BAR 宮 | 我有酒，你有故事嗎 ? 台北市大安區大安路一段31巷50號'
+      content:
+        'BAR宮-MIYA | 我有酒，你有故事嗎 ? 台北市大安區大安路一段31巷50號'
     },
     {
       hid: 'og:type',
@@ -45,7 +47,7 @@ useHead({
     {
       hid: 'og:image',
       property: 'og:image',
-      content: '/home_page_bg.png'
+      content: 'https://i.ibb.co/Xbq8hBr/logo.png'
     }
   ],
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]

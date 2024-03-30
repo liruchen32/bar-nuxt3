@@ -5,14 +5,14 @@
       <v-avatar class="mx-2" size="x-large">
         <v-img src="https://i.ibb.co/Xbq8hBr/logo.png"></v-img>
       </v-avatar>
-      <h2>BAR 宮</h2>
+      <h2>BAR宮-MIYA</h2>
     </div>
     <v-row v-if="smAndUp" class="mx-2 justify-center">
       <v-col class="header_left mx-4 pointer" cols="4" @click="toHome">
         <v-avatar class="mx-2" size="x-large">
           <v-img src="https://i.ibb.co/Xbq8hBr/logo.png"></v-img>
         </v-avatar>
-        <h2>BAR 宮</h2>
+        <h2>BAR宮-MIYA</h2>
       </v-col>
       <v-spacer />
       <v-col class="header_rigth mx-4" cols="4">
