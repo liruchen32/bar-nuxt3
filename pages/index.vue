@@ -9,17 +9,13 @@
           class="h-100 d-flex flex-column justify-center align-center"
           v-if="render"
         >
-          <div style="width: 50%">
-            <v-img src="https://i.ibb.co/hCygrVb/LOGO2.png"></v-img>
+          <div style="width: 40%">
+            <v-img src="https://i.ibb.co/Xbq8hBr/logo.png"></v-img>
           </div>
           <div class="my-2 text-h6 text-white">我有酒，你有故事嗎？</div>
         </div>
       </Transition>
     </v-parallax>
-    <div class="d-flex flex-row justify-center align-center h-screen bg-black">
-      <h5 class="text-h5">關於我們</h5>
-      <div class="text-h6">我們就是愛喝酒</div>
-    </div>
     <div class="d-flex justify-center align-center mt-3">
       <div class="text-h5">熱門調酒</div>
       <v-btn
