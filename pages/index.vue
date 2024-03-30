@@ -9,16 +9,19 @@
           class="h-100 d-flex flex-column justify-center align-center"
           v-if="render"
         >
-          <div style="width: 40%">
-            <v-img src="https://i.ibb.co/Xbq8hBr/logo.png"></v-img>
+          <div style="width: 50%">
+            <v-img src="https://i.ibb.co/hCygrVb/LOGO2.png"></v-img>
           </div>
-          <h1 class="text-h3 my-2 text-white">BAR 宮</h1>
-          <h4 class="text-h6 text-white">我有酒，你有故事嗎？</h4>
+          <div class="my-2 text-h6 text-white">我有酒，你有故事嗎？</div>
         </div>
       </Transition>
     </v-parallax>
+    <div class="d-flex flex-row justify-center align-center h-screen bg-black">
+      <h5 class="text-h5">關於我們</h5>
+      <div class="text-h6">我們就是愛喝酒</div>
+    </div>
     <div class="d-flex justify-center align-center mt-3">
-      <h4 class="text-h5">熱門調酒</h4>
+      <div class="text-h5">熱門調酒</div>
       <v-btn
         class="mx-4"
         variant="outlined"
@@ -47,14 +50,6 @@ export default {
       }, 500);
       window.scrollTo(0, 0);
     });
-
-    const cocktailImages = ref([
-      '015_ALPHA',
-      '008_LEMON_SEA',
-      '004_MATCHA',
-      '007_THAI',
-      '003_JUGURONI'
-    ]);
 
     const { popularCocktails } = cocktailsStore();
 

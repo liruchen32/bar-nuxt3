@@ -16,7 +16,7 @@
       <v-btn
         v-if="offsetTop"
         style="bottom: 20px; right: 20px"
-        color="light-blue-lighten-3"
+        color="grey darken-1"
         :position="'fixed'"
         :icon="mdiArrowUpBoldHexagonOutline"
         :elevation="12"

@@ -48,11 +48,11 @@ export default {
     const icons = [
       {
         icon: mdiFacebook,
-        link: 'https://www.facebook.com/pages/category/Bar/BAR%E5%AE%AE-Miya-337530157118054/'
+        link: 'https://www.facebook.com/pages/category/Bar/BAR%E5%AE%AE-MIYA-337530157118054/'
       },
       {
         icon: mdiInstagram,
-        link: 'https://www.instagram.com/miya_taipei/?hl=zh-tw'
+        link: 'https://www.instagram.com/MIYA_taipei/?hl=zh-tw'
       }
     ];
 
