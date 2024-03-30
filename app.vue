@@ -48,6 +48,10 @@ useHead({
       hid: 'og:image',
       property: 'og:image',
       content: 'https://i.ibb.co/Xbq8hBr/logo.png'
+    },
+    {
+      name: 'google-site-verification',
+      content: '0In_gV_oi67qPfH2ea7AD8YyXHoQJf_7Sh9ntnH4Udo'
     }
   ],
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
