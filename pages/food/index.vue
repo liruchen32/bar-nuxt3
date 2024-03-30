@@ -1,5 +1,7 @@
 <template>
-  <h1 class="text-h1">Incoimg</h1>
+  <div class="d-flex justify-center">
+    <img src="https://i.ibb.co/SfHsZJ4/food-menu.jpg" />
+  </div>
 </template>
 
 <script>
@@ -12,3 +14,11 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+img {
+  width: 100%;
+  max-width: 768px;
+  object-fit: contain;
+}
+</style>
